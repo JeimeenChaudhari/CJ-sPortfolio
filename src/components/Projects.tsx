@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import projectsBg from '../assets/projects-bg.jpg';
+import Typing_Speed_Test from '../assets/Typing_Speed_Test.jpg';
 
 const Projects = () => {
   const ref = useRef(null);
@@ -11,12 +12,12 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
-      image: projectsBg,
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      github: 'https://github.com',
-      live: 'https://demo.com',
+      title: 'Typing Speed Test',
+      description: 'A fast, interactive typing speed tester built with React. It measures your typing speed in Words Per Minute (WPM), tracks accuracy, mistakes, and shows detailed results after completion. Perfect for improving typing skills with real-time feedback and a modern UI.',
+      image: Typing_Speed_Test,
+      technologies: ['React', 'Vite', 'JavaScript', 'gh-pages'],
+      github: 'https://github.com/JeimeenChaudhari/Typing_speed_test',
+      live: 'https://jeimeenchaudhari.github.io/Typing_speed_test/',
       featured: true
     },
     {
