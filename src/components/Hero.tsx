@@ -83,9 +83,9 @@ const Hero = () => {
             className="flex space-x-6"
           >
             {[
-              { icon: Github, href: 'https://github.com', label: 'GitHub' },
-              { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:alex@example.com', label: 'Email' }
+              { icon: Github, href: 'https://github.com/JeimeenChaudhari', label: 'GitHub' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/jeimeen-chaudhari-3a680028b/', label: 'LinkedIn' },
+              { icon: Mail, href: 'mailto:jeimeen3001@gmail.com', label: 'Email' }
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}

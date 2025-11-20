@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, Battery } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import projectsBg from '../assets/projects-bg.jpg';
 import Typing_Speed_Test from '../assets/Typing_Speed_Test.jpg';
+import BatteryBms from '../assets/Battery-Bms.jpg';
+import BAtteryFlow from '../assets/Battery-Flow.jpg';
 
 const Projects = () => {
   const ref = useRef(null);
@@ -21,45 +23,62 @@ const Projects = () => {
       featured: true
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'ExpenseFlow (Under Construction)',
+      description: 'ExpenseFlow is a smart and seamless expense tracking app that helps you manage, analyze, and optimize your finances effortlessly.',
       image: projectsBg,
-      technologies: ['Next.js', 'TypeScript', 'MongoDB', 'Socket.io'],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Recharts', 'Vite'],
       github: 'https://github.com',
-      live: 'https://demo.com'
+      live: 'https://expense-flow-enwt.vercel.app/'
     },
     {
-      title: 'AI Content Generator',
-      description: 'An AI-powered content creation platform that helps users generate high-quality articles, social media posts, and marketing copy.',
-      image: projectsBg,
-      technologies: ['React', 'Python', 'OpenAI API', 'FastAPI'],
-      github: 'https://github.com',
-      live: 'https://demo.com'
+      title: 'Battery_BMS_Dashboard',
+      description: 'A comprehensive dashboard for monitoring and managing battery management systems (BMS) in electric vehicles, providing real-time data visualization and analytics.',
+      image: BatteryBms,
+      technologies: ['Streamlit', 'Python', 'Pandas', 'DashBoard'],
+      github: 'https://github.com/JeimeenChaudhari/BMS_dashboard',
+      live: 'https://bms-dashboardflow.streamlit.app/'
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather application with detailed forecasts, interactive maps, and personalized weather alerts.',
+      title: 'Cell System',
+      description: 'An advanced battery cell management system designed to optimize performance, enhance safety, and extend the lifespan of battery cells through intelligent monitoring and control mechanisms.',
       image: projectsBg,
-      technologies: ['Vue.js', 'Express.js', 'Weather API', 'Chart.js'],
-      github: 'https://github.com',
-      live: 'https://demo.com'
+      technologies: ['Streamlit', 'Python', 'Pandas', 'Plotly'],
+      github: 'https://github.com/JeimeenChaudhari/CellSystem',
+      live: 'https://cellsystem.streamlit.app/'
     },
     {
-      title: 'Social Media Analytics',
-      description: 'A comprehensive analytics dashboard for social media management with real-time data visualization and reporting.',
+      title: 'Fraud-detction Straemlit Machine Learning',
+      description: 'Made Project Of Unified Mentor For Internship,A Streamlit app that utilizes machine learning algorithms to detect fraudulent activities in financial transactions, providing users with real-time analysis and insights.',
       image: projectsBg,
-      technologies: ['React', 'D3.js', 'Node.js', 'Redis'],
-      github: 'https://github.com',
-      live: 'https://demo.com'
+      technologies: ['Streamlit', 'Python', 'Scikit-learn', 'Pandas', 'Plotly', 'Machine Learning'],
+      github: 'https://github.com/JeimeenChaudhari/fraud_detection-UMP1',
+      live: 'https://fraud-detection-ump1.streamlit.app/'
     },
     {
-      title: 'Fitness Tracking App',
-      description: 'A mobile-first fitness application with workout tracking, progress visualization, and social features.',
+      title: 'Heart Disease Predictio Sttreamlit App',
+      description: 'Made Project Of Unified Mentor For Internship,A Streamlit app that utilizes machine learning algorithms to detect fraudulent activities in financial transactions, providing users with real-time analysis and insights.',
       image: projectsBg,
       technologies: ['React Native', 'Firebase', 'Redux', 'Chart.js'],
       github: 'https://github.com',
       live: 'https://demo.com'
-    }
+    },
+    {
+      title: 'Lung Cancer Prediction Streamlit App',
+      description: 'Made Project Of Unified Mentor For Internship,A Streamlit app that utilizes machine learning algorithms to detect fraudulent activities in financial transactions, providing users with real-time analysis and insights.',
+      image: projectsBg,
+      technologies: ['Streamlit', 'Python', 'Scikit-learn', 'Pandas', 'Plotly', 'Machine Learning'],
+      github: 'https://github.com/JeimeenChaudhari/fraud_detection-UMP1',
+      live: 'https://fraud-detection-ump1.streamlit.app/'
+    },
+    {
+      title: 'Mobile Phone Price Prediction Streamlit App',
+      description: 'Made Project Of Unified Mentor FFor Internship,A Streamlit app that utilizes machine learning algorithms to detect fraudulent activities in financial transactions, providing users with real-time analysis and insights.',
+      image: projectsBg,
+      technologies: ['Streamlit', 'Python', 'Scikit-learn', 'Pandas', 'Plotly', 'Machine Learning'],
+      github: 'https://github.com/JeimeenChaudhari/fraud_detection-UMP1',
+      live: 'https://fraud-detection-ump1.streamlit.app/'
+    },
+
   ];
 
   return (
@@ -86,9 +105,8 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`glass rounded-xl overflow-hidden hover-lift hover-glow ${
-                project.featured ? 'md:grid-cols-2' : ''
-              }`}
+              className={`glass rounded-xl overflow-hidden hover-lift hover-glow ${project.featured ? 'md:grid-cols-2' : ''
+                }`}
             >
               <div className={`grid ${project.featured ? 'md:grid-cols-2' : 'grid-cols-1'} gap-8 p-8`}>
                 {/* Project Image */}
@@ -102,7 +120,7 @@ const Projects = () => {
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-primary opacity-20"></div>
-                  
+
                   {/* Overlay */}
                   <motion.div
                     initial={{ opacity: 0 }}

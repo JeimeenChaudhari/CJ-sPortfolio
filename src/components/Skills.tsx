@@ -23,7 +23,9 @@ const Skills = () => {
       skills: [
         { name: 'Html5', level: 90 },
         { name: 'React.js', level: 88 },
-        { name: 'Tailwind CSS', level: 85 },
+        { name: 'Java Script', level: 75 },
+        { name: 'Type Script', level: 70 },
+        { name: 'Tailwind CSS', level: 70 },
         { name: 'Vite', level: 82 },
         { name: 'Responsive UI Design', level: 80 }
       ]
@@ -31,11 +33,15 @@ const Skills = () => {
     {
       title: 'Tools & Others',
       skills: [
+        { name: 'Docker', level: 85 },
         { name: 'Git & GitHub', level: 95 },
         { name: 'N8N', level: 78 },
         { name: 'Vercel', level: 75 },
         { name: 'Figma', level: 88 },
-        { name: 'MongoDB', level: 85 }
+        { name: 'MongoDB', level: 85 },
+        { name: 'Critical Thinking', level: 95 },
+        { name: 'Problem Solving', level: 90 },
+        { name: 'Decision Making', level: 99 },
       ]
     }
   ];
@@ -119,8 +125,9 @@ const Skills = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              'Python', 'Numpy', 'Scikit-learn', 'Seaborn', 'Tailwind', 'MongoDB',
-              'N8n', 'Git & GitHub', 'Vercel', 'Figma', 'AWS', 'Docker'
+              'Vs Code','Python', 'Numpy', 'Scikit-learn','Pytorch','TensorFlow', 'Seaborn', 'Tailwind', 'MongoDB',
+              'N8n', 'Git & GitHub', 'Vercel', 'Figma', 'AWS', 'Docker','Jupyter Notebooks','OpenAI GPT Models','Gemini',
+              'Canva','Perplexity','Google Colab', 'Wondershare Filmora', 'Hostinger' , 'Hugging Face'
             ].map((tech, index) => (
               <motion.div
                 key={tech}
